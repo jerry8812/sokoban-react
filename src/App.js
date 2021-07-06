@@ -7,7 +7,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
-        <Game currentLevel={data.levels[0]}/>
+        <Game currentLevel={data.levels[3]}/>
       </div>
     )
   }

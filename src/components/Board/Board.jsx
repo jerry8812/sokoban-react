@@ -67,8 +67,6 @@ export default class Board extends Component {
         })
       }
     }
-
-
   }
 
   componentDidMount() {
@@ -84,7 +82,7 @@ export default class Board extends Component {
     const { mapWidth, mapHeight, gameMap } = this.state
     return (
       <div className="gameBoard"
-        style={{ gridTemplateColumns: 'repeat(' + mapWidth + ', 60px)', gridTemplateRows: 'repeat(' + mapHeight + ', 60px)' }}>
+        style={{ gridTemplateColumns: 'repeat(' + mapWidth + ', 55px)', gridTemplateRows: 'repeat(' + mapHeight + ', 55px)' }}>
         {
           gameMap.map((row) => {
             return row.map((cell, index) => {

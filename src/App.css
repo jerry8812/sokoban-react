@@ -1,6 +1,10 @@
+@import url(./assets/css/normalize.css);
+
 .app {
-  width: 60%;
-  height: auto;
-  margin: 0 auto;
-  /* background-color: antiquewhite; */
+  background-image: url(./assets/images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  overflow-y:hidden;
 }
