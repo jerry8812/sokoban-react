@@ -1,35 +1,56 @@
 import React, { Component } from 'react'
-import Board from '../Board/Board'
+import Board from './Board/Board'
 import "./Game.css"
-
-function getAllTargets(array) {
-  const newArray = []
-  array.forEach((element, x)=> {
-    element.forEach((cell, y) => {
-      if(cell === 3) {
-        newArray.push([x, y])
-      }
-    })
-  })
-  return newArray
-}
+import {formatTime} from '../../utils/utils'
 
 export default class Game extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      step: 0,
+      time: 0
+    }
+  }
+
+  move = (gameMap, player) => {
+    this.props.move(gameMap, player)
+  }
+
+  componentDidMount() {
+    /* let {time} = this.state
+    this.timer = setInterval(() => {
+      this.setState({
+        time: ++time
+      })
+    }, 1000) */
+  }
+  componentWillUnmount() {
+    // clearInterval(this.timer)
+  }
 
   render() {
-    const { currentLevel } = this.props
-    currentLevel.targets = getAllTargets(currentLevel.gameMap)
+    const { currentLevel, size, targets} = this.props
+    const {step, time} = this.state
+    const currentLevelName = Number.parseInt(currentLevel.name)
+    
     return (
-      <div className="mainGame">
-        <Board currentLevel={currentLevel}/>
+      <div className="homePage_game">
+        <Board {...currentLevel} 
+               move={this.move}
+               targets = {targets}/>
         <div className="gameInfo">
-          <h1 className="gameInfo-title">SOKOBAN</h1>
           <div className="gameInfo-levels">
-            <p>Levels: 4/25</p>
+            <p>Levels {currentLevelName}/{size}</p>
             <div className="gameInfo-buttons">
               <div className="gameInfo-buttons-group1">
-                <input type="button" value="Previous Level"/>
-                <input type="button" value="Next Level"/>
+                <input type="button" 
+                       value="Previous Level" 
+                       onClick={()=>this.props.changeLevel(currentLevelName-1)}
+                       className={currentLevelName <= 1 ? "btn_disabled" : ""}/>
+
+                <input type="button" value="Next Level" 
+                       onClick={()=>this.props.changeLevel(currentLevelName+1)}
+                       className={currentLevelName >= size ? "btn_disabled" : ""}/>
               </div>
               <div>
                 <input type="button" value="Reset"/>
@@ -37,8 +58,8 @@ export default class Game extends Component {
               </div>
             </div>
             <div className="gameInfo-count">
-              <p>Step: 3</p>
-              <p>Time: 3</p>
+              <p>Step: {step}</p>
+              <p>Time: {formatTime(time)}</p>
             </div>
           </div>
         </div>

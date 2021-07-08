@@ -1,0 +1,31 @@
+.homePage_levels {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: max-content;
+}
+
+.homePage_levels_level {
+  width: 10rem;
+  height: 40px;
+  border-radius: 4px;
+  background-color: tomato;
+  margin: 7px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.homePage_levels_level img {
+  width: 30px;
+  margin: 5px 2px 0 2px
+}
+.homePage_levels_level p {
+  margin: 11px 20px;
+}
+
+.homePage_levels_level:hover {
+  box-shadow: 2px 0 2px rgba(46, 46, 46, 0.6), -2px 0 2px rgba(46, 46, 46, 0.6),
+    0 2px 2px rgba(46, 46, 46, 0.6), 0 2px 2px rgba(46, 46, 46, 0.6);
+}
