@@ -12,9 +12,9 @@ export default class Levels extends Component {
           levels.map(level => {
             return <div className="homePage_levels_level" 
                         key={level.name}
-                        onClick={()=>{this.props.changeLevel(level.name)}}>
+                        onClick={()=>{this.props.reset(level.name)}}>
               <p>{level.name}</p>
-              <div>
+              <div className="homePage_levels_imgs">
                 <img src={star} alt="star" />
                 <img src={star} alt="star" />
                 <img src={star} alt="star" />

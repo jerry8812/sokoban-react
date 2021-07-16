@@ -14,14 +14,6 @@ const directionMap = {
 }
 
 export default class Board extends Component {
-  /* constructor(props) {
-    super(props)
-    this.state = {
-      gameMap: this.props.currentLevel.gameMap,
-      player: this.props.currentLevel.player
-    }
-  } */
-
 
   handleKeyDown = (event) => {
     if (directionMap[event.keyCode]) {
@@ -45,17 +37,17 @@ export default class Board extends Component {
     }
   }
   doMove = (movePlayerTo, moveCrateTo) => {
-    let { gameMap, player } = this.props 
+    let { gameMap, player } = this.props
+    let newGameMap = JSON.parse(JSON.stringify(gameMap))
     const targets = this.props.targets
-    console.log(targets);
     const isPlayerOnTargte = JSON.stringify(targets).indexOf(JSON.stringify([player.x, player.y])) !== -1
-    gameMap[movePlayerTo.x][movePlayerTo.y] = 2
-    gameMap[player.x][player.y] = isPlayerOnTargte ? 3 : 0
+    newGameMap[movePlayerTo.x][movePlayerTo.y] = 2
+    newGameMap[player.x][player.y] = isPlayerOnTargte ? 3 : 0
     if(moveCrateTo) {
-      gameMap[moveCrateTo.x][moveCrateTo.y] = gameMap[moveCrateTo.x][moveCrateTo.y] === 0 ? 4 : 5
+      newGameMap[moveCrateTo.x][moveCrateTo.y] = newGameMap[moveCrateTo.x][moveCrateTo.y] === 0 ? 4 : 5
     }
     player = { "x": movePlayerTo.x, "y": movePlayerTo.y }
-    this.props.move(gameMap, player)
+    this.props.move(newGameMap, player)
   }
 
   componentDidMount() {
