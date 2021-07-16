@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/sokoban-react/static/css/main.152a4d6d.chunk.css",
+    "main.js": "/sokoban-react/static/js/main.774c1efd.chunk.js",
+    "main.js.map": "/sokoban-react/static/js/main.774c1efd.chunk.js.map",
+    "runtime-main.js": "/sokoban-react/static/js/runtime-main.c62b9026.js",
+    "runtime-main.js.map": "/sokoban-react/static/js/runtime-main.c62b9026.js.map",
+    "static/js/2.f40db94f.chunk.js": "/sokoban-react/static/js/2.f40db94f.chunk.js",
+    "static/js/2.f40db94f.chunk.js.map": "/sokoban-react/static/js/2.f40db94f.chunk.js.map",
+    "index.html": "/sokoban-react/index.html",
+    "static/css/main.152a4d6d.chunk.css.map": "/sokoban-react/static/css/main.152a4d6d.chunk.css.map",
+    "static/js/2.f40db94f.chunk.js.LICENSE.txt": "/sokoban-react/static/js/2.f40db94f.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/sokoban-react/static/media/background.fdf4d35d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c62b9026.js",
+    "static/js/2.f40db94f.chunk.js",
+    "static/css/main.152a4d6d.chunk.css",
+    "static/js/main.774c1efd.chunk.js"
+  ]
+}
