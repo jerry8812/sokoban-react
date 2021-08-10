@@ -22,7 +22,7 @@ export default class Cell extends Component {
     const style = {
       width: '40px', 
       height: '40px', 
-      opacity: (cellSymbol === "0") ? "0.2" : "1"
+      opacity: (cellSymbol === "0") ? "0" : "1"
     }
     return (
       <img src={entityImageMap[cellSymbol]} alt="entity" style={style}/>
