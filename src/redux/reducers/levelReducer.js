@@ -1,32 +1,41 @@
 /*
  * @Author: your name
  * @Date: 2021-08-10 21:27:45
- * @LastEditTime: 2021-08-11 01:22:41
+ * @LastEditTime: 2021-08-13 00:07:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \react-project\sokoban_react\src\redux\reducers\levelReducer.js
  */
 import {ActionTypes} from '../constants/action-types'
+import data from '../../assets/levels.json'
+import { deepCopy } from '../../utils/utils'
 
-const data = require('../../assets/levels.json')
-
-const initialState = {
-  allLevels: data.levels,
-  currentLevel: data.levels[0]
-}
+const initialState = deepCopy(data.levels).map((level, index) => {
+  return {
+    levelName: level.name, 
+    isLocked: index === 0 ? false : true,
+    grade: 3,
+    isWon: false
+  }
+})
 
 export const levelsReducer = (state = initialState, {type, payload}) => {
   switch (type) {
-    case ActionTypes.SET_CURRENT_LEVEL:
-      return data.levels[payload]
+    case ActionTypes.UNLOCK_ALL_LEVELS:
+      return state.map(level=>({...level, isLocked: payload.isLocked}))
+    case ActionTypes.UNLOCK_LEVEL:
+      const levelState = state.map(level => {
+        if(level.levelName === payload) return {...level, isLocked: false}
+        else return level
+      })
+      return levelState
+    case ActionTypes.SET_GRADE:
+      const gradeState = state.map(level => {
+        if(level.levelName === payload.levelName) return {...level, grade: payload.grade, isWon: true}
+        else return level
+      })
+      return gradeState
     default: 
       return state
   }
 }
-
-/* export const currentLevelReducer = (state={}, {type, payload}) => {
-  switch (type) {
-    case ActionTypes.SET_CURRENT_LEVEL:
-      return data.levels[payload]
-  }
-} */

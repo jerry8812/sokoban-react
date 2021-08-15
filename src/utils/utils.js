@@ -1,17 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2021-07-07 10:26:43
- * @LastEditTime: 2021-07-11 22:51:38
+ * @LastEditTime: 2021-08-12 22:39:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \react-project\sokoban_react\src\utils\utils.js
  */
+export const deepCopy = newData => JSON.parse(JSON.stringify(newData))
 
-export function getAllLevels() {
-  const data = require('../assets/levels.json')
-  return JSON.parse(JSON.stringify(data.levels))
-}
- 
 export function getAllTargets(array) {
   const newArray = []
   array.forEach((element, x)=> {
@@ -24,7 +20,15 @@ export function getAllTargets(array) {
   return newArray
 }
 
-export function getPlayerPosition(array) {
+export function grade(targets,count,levelName) {
+  const baseCount = levelName + targets
+  if(count < baseCount * 20) return 3
+  else if(count >= baseCount * 20 && count < baseCount * 30) return 2
+  else if(count >= baseCount * 30) return 1
+  else return 3
+}
+
+/* export function getPlayerPosition(array) {
   array.forEach((element, positionX)=> {
     element.forEach((cell, positionY) => {
       if(cell === 2) {
@@ -32,7 +36,7 @@ export function getPlayerPosition(array) {
       }
     })
   })
-}
+} */
 
 export function getNumbersOfObject(array, object) {
   return array.flat().reduce((preValue, currValue) => currValue === object ? ++preValue: preValue, 0)
@@ -47,3 +51,4 @@ export function formatTime(t=0) {
 const appendZero = ((n) => {
   return n.toLocaleString({}, {minimumIntegerDigits: 2})
 })
+

@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import wall from "../assets/images/wall.png"
 
-export default class Header extends Component {
+export default class Walls extends Component {
+
   state = {
     width: document.body.clientWidth
   }
@@ -23,15 +24,12 @@ export default class Header extends Component {
     const { width } = this.state
     const counts = parseInt(width/35) + 1
     return (
-      <div className="app-header">
-        <div className="app-header-top">
-          {[...Array(counts)].map((e, index) => {
-            return <div key={index}>
-              <img src={wall} alt="images" style={{width: '35px'}}/>
-            </div>
-          })}
-        </div>
-        <h1>SOKOBAN</h1>
+      <div className="app-header-top">
+        {[...Array(counts)].map((e, index) => {
+          return <div key={index}>
+            <img src={wall} alt="images" style={{width: '35px'}}/>
+          </div>
+        })}
       </div>
     );
   }
