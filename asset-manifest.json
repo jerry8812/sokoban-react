@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/sokoban-react/static/css/main.3a4930dc.chunk.css",
-    "main.js": "/sokoban-react/static/js/main.41b77a9a.chunk.js",
-    "main.js.map": "/sokoban-react/static/js/main.41b77a9a.chunk.js.map",
+    "main.css": "/sokoban-react/static/css/main.c50e1b05.chunk.css",
+    "main.js": "/sokoban-react/static/js/main.9b341b5a.chunk.js",
+    "main.js.map": "/sokoban-react/static/js/main.9b341b5a.chunk.js.map",
     "runtime-main.js": "/sokoban-react/static/js/runtime-main.c62b9026.js",
     "runtime-main.js.map": "/sokoban-react/static/js/runtime-main.c62b9026.js.map",
-    "static/js/2.2ceffce0.chunk.js": "/sokoban-react/static/js/2.2ceffce0.chunk.js",
-    "static/js/2.2ceffce0.chunk.js.map": "/sokoban-react/static/js/2.2ceffce0.chunk.js.map",
+    "static/js/2.175dde5b.chunk.js": "/sokoban-react/static/js/2.175dde5b.chunk.js",
+    "static/js/2.175dde5b.chunk.js.map": "/sokoban-react/static/js/2.175dde5b.chunk.js.map",
     "index.html": "/sokoban-react/index.html",
-    "static/css/main.3a4930dc.chunk.css.map": "/sokoban-react/static/css/main.3a4930dc.chunk.css.map",
-    "static/js/2.2ceffce0.chunk.js.LICENSE.txt": "/sokoban-react/static/js/2.2ceffce0.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/sokoban-react/static/media/background_black.9a098ef3.png"
+    "static/css/main.c50e1b05.chunk.css.map": "/sokoban-react/static/css/main.c50e1b05.chunk.css.map",
+    "static/js/2.175dde5b.chunk.js.LICENSE.txt": "/sokoban-react/static/js/2.175dde5b.chunk.js.LICENSE.txt",
+    "static/media/star_empty.2437d8c0.png": "/sokoban-react/static/media/star_empty.2437d8c0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c62b9026.js",
-    "static/js/2.2ceffce0.chunk.js",
-    "static/css/main.3a4930dc.chunk.css",
-    "static/js/main.41b77a9a.chunk.js"
+    "static/js/2.175dde5b.chunk.js",
+    "static/css/main.c50e1b05.chunk.css",
+    "static/js/main.9b341b5a.chunk.js"
   ]
 }
