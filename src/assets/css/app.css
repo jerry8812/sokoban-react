@@ -46,12 +46,12 @@
 /* css for component Levels */
 .app-levels {
   border-right: 1px solid gray;
-  padding: 0 1em;
+  padding: 0.3em 1em;
 }
 .app-levels-selectLevels {
   font-size: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 0.9rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
   text-align: center;
 }
 
@@ -78,6 +78,17 @@
   position: relative;
   border: 1px solid rgb(153, 147, 147);
 }
+.app-levels-descriptions {
+  padding-bottom: 30px;
+}
+.app-levels-descriptions img {
+  width: 1.6rem;
+}
+.app-levels-descriptions span{
+  font-size: 1.1rem;
+  font-family: 'Arimo', sans-serif;
+  letter-spacing: 0.03rem;
+}
 /* levelName on all levles */
 .app-levels-level p{
   color: rgb(224, 203, 14);
@@ -96,14 +107,15 @@
   left: 16%;
   transform: translate(-50%, -50%);
 }
-.app-levels img{
+.app-levels-level img{
   width: 0.7rem;
   padding: 0 0.08rem;
 }
 
+
 /* css for component Game*/
 .app-game {
-  padding: 3rem 0 0 1rem;
+  padding: 2.8rem 0 0 1rem;
   /* padding: 3rem 0 1rem 1.5rem; */
   display: flex;
 }
@@ -114,6 +126,20 @@
 .gameBoard {
   margin: 0 auto;
   display: grid;
+}
+.app-board-copyright {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(180, 180, 24);
+}
+
+.app-board-copyright img {
+  width: 13px;
+  padding-right: 5px;
 }
 /* css for component GameInfo*/
 .app-game-gameInfo {

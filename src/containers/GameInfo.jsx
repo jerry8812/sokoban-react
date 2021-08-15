@@ -6,7 +6,7 @@ import { setCurrentLevel,move } from '../redux/actions/levelActions'
 class GameInfo extends Component {
 
   changeLevel = (levelName) => {
-    if(levelName>0 && levelName< this.props.allLevels.length) {
+    if(levelName>0 && levelName<= this.props.allLevels.length) {
       this.props.setCurrentLevel(levelName)
     }
   }

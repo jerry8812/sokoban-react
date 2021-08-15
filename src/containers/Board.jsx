@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+
+import copyRight from '../assets/images/copyright.png' 
 import { connect } from 'react-redux'
 import { move,unlockLevel,setOpen,setGrade } from '../redux/actions/levelActions'
 import { getNumbersOfObject, grade } from '../utils/utils'
@@ -99,6 +101,10 @@ class Board extends Component {
               })
             })
           }
+        </div>
+        <div className="app-board-copyright">
+          
+          <span><img src={copyRight} alt="copyright" />Jerry Wang</span>
         </div>
       </div>
     )
