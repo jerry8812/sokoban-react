@@ -40,8 +40,7 @@ class Game extends Component {
     }
   }
   switchImage = (theKey)=>{
-    const {allArrows} = this.state
-    const theArrow = allArrows[theKey]
+    const theArrow = this.state.allArrows[theKey]
     this.setState({
       allArrows: {
         ...this.state.allArrows, [theKey]: {...theArrow,isPressed: false}
